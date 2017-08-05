@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.springframework.org/schema/mvc" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Login to demo app</title>
+</head>
+<body>
+<script th:src="@{/js/jquery-3.2.1.min.js}"></script>
+<script th:src="@{/js/application.js}"></script>
+<table>
+    <tr>
+        <td>Username</td>
+        <td><input value="" id="userText"/></td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td><input type="password" value="" id="passwordText"/></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Login" id="loginButton"/></td>
+    </tr>
+    <tr>
+        <td>
+            <div id="msgLabel"></div>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
