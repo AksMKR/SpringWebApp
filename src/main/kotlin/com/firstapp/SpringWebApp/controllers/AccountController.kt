@@ -9,17 +9,17 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class AccountController {
 
-    val currenUser = User("admin", "1234")
+    val currentUser = User("admin", "1234")
 
     @RequestMapping("/me")
     fun aboutMe(): User {
-        return currenUser
+        return currentUser
     }
 
     @PostMapping("/validate")
     fun validate(@RequestBody user: User): Map<String, Boolean> {
         println(user)
-        val param = mapOf("status" to (currenUser == user))
+        val param = mapOf("status" to (currentUser == user))
         return param
     }
 }
